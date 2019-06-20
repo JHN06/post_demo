@@ -35,5 +35,16 @@ public class PostDAO {
 		int count = sqlSession.delete("guestbook.delete", no);
 		return count == 1;
 	}
+	public boolean login(String id, String pwd) {
+		if(id == null || pwd == null) {
+			return false;
+		}
+
+		if("admin".equals(id) && "1234".equals(pwd)){
+			return true;
+		}
+
+		return false;
+	}
 
 }
