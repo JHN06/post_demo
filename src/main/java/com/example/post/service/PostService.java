@@ -12,20 +12,19 @@ import com.example.post.vo.PostVO;
 public class PostService {
 	@Autowired
 	private PostDAO guestBookDAO;
-	
-	
+
+
 	public List<PostVO> getList(){
 		return guestBookDAO.getList();
 	}
-	
-	
+
+
 	public boolean insert(PostVO vo ) {
 		return guestBookDAO.insert(vo);
 	}
-	
-	
+
+
 	public boolean delete(PostVO vo) {
 		return guestBookDAO.delete(vo.getNo());
 	}
 }
-
